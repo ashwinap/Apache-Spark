@@ -1,3 +1,18 @@
+
+###########################################################################
+## Map input ratings to (UserID, (movieID, rating))
+## Find every movie pair rated by the same user
+## This can be done by using self-join.
+## At this point we have (UserID,((movieID1, rating1), (movieID2, rating2)))
+## Filter Duplicate pairs.
+## Make the movie pairs the keys
+## Map to (movieID1, movieID2), (rating1, rating2)
+## groupByKey() to get every rating pair found for each movie pair.
+## Compute similarity between ratings for each movie in the pair.
+###########################################################################
+
+
+
 import sys
 from pyspark import SparkConf, SparkContext
 from math import sqrt
